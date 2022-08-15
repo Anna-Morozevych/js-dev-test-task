@@ -144,6 +144,15 @@ form.addEventListener('click', (eventObj) => {
 
   const div = document.createElement('div');
 
+  if (name.length < 2
+    || email.length < 2
+    || phone.length < 2) {
+    pushNotification('error', div);
+    showNotification(div);
+
+    return;
+  }
+
   // eslint-disable-next-line max-len
   if (!(/([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test(form.elements.email.value))) {
     pushNotification('email', div);
@@ -154,15 +163,6 @@ form.addEventListener('click', (eventObj) => {
 
   if (!(/^[1-9]+[0-9]*$/.test(form.elements.phone.value))) {
     pushNotification('phone', div);
-    showNotification(div);
-
-    return;
-  }
-
-  if (name.length < 2
-    || email.length < 2
-    || phone.length < 2) {
-    pushNotification('error', div);
     showNotification(div);
 
     return;
