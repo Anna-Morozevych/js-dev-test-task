@@ -1,0 +1,25 @@
+.open {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &__button {
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    background-color: #fff;
+    border-color: transparent;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border: 2px solid #558035;
+      border-radius: 10px;
+      background-color: #eef2ea;
+    }
+  }
+}

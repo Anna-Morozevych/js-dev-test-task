@@ -1,7 +1,15 @@
-@import "utils";
-@import "fonts";
-@import "typography";
+@import "./blocks/popup.scss";
+@import "./blocks/open.scss";
+@import "./blocks/notification.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Neue", cursive;
+}
 
 body {
-  background: $c-gray;
+  height: 100vh;
+  background: linear-gradient(to right, #aabf9a, #f9fbc9);
 }
